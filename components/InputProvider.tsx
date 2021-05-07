@@ -8,16 +8,7 @@ import React, { useReducer, useContext, createContext } from 'react'
 const InputStateContext = createContext(null);
 const InputDispatchContext = createContext(null);
 
-const textReducer = (state, action) => {
-  switch (action.type) {
-    case 'INPUT':
 
-      return state;
-
-    default:
-      break;
-  }
-}
 
 export const InputProvider: React.FC<InputProviderProps> = ({ children }: InputProviderProps): JSX.Element => {
   const [state, dispatch] = useReducer(textReducer, "")
