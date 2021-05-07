@@ -12,7 +12,6 @@ export const InputField: React.FC<InputFieldProps> = ({
   initial_text,
 }: InputFieldProps): JSX.Element => {
   return (
-
     <div className="container">
       <input></input>
       <style jsx>{``}</style>
