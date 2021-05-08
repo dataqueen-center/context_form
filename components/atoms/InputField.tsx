@@ -16,11 +16,14 @@ export const InputField: React.FC<InputFieldProps> = ({
 
   const updateText = (event)=> {
     dispatch({ type: INPUT, value: event.target.value })
+    console.log(text)
   }
+  // useEffect(() => {updateText},[])
   return (
     <div className="container">
       <input onChange={updateText}></input>
       {text}
+
       <style jsx>{``}</style>
     </div>
   )

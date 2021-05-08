@@ -6,8 +6,7 @@ export const useForm = (initialState: string) => {
   const textReducer = (state, action) => {
     switch (action.type) {
       case INPUT:
-        return { text: action.value }
-
+        return { ...state, text: action.value }
       default:
         return state
     }
@@ -22,11 +21,13 @@ export const useForm = (initialState: string) => {
   //   dispatch({ type: INPUT, value: e.target.value })
   // }
 
-  return {
-    state,
-    dispatch
-    // bind: {
-    //   onChange: updateText,
-    // },
-  }
+  return [state, dispatch]
+
+  // return {
+  //   state,
+  //   dispatch
+  //   // bind: {
+  //   //   onChange: updateText,
+  //   // },
+  // }
 }
