@@ -1,4 +1,4 @@
-import { ChangeEvent, useReducer } from 'react'
+import { useReducer } from 'react'
 
 const INPUT = 'input'
 
@@ -12,7 +12,6 @@ export const useForm = (initialState: string) => {
     }
   }
   const initTextState = (initialText: string) => {
-    console.log("きてる")
     return initialText
   }
   const [state, dispatch] = useReducer(textReducer, initialState, initTextState)
