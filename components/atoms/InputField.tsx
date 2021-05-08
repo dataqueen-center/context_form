@@ -14,11 +14,15 @@ export const InputField: React.FC<InputFieldProps> = ({
   const text = useText().text
   const dispatch = useDispatchText()
 
-  const updateText = (event)=> {
-    dispatch({ type: INPUT, value: event.target.value })
-    console.log(text)
+  const updateText = (event) => {
+    if (text !== event.target.value) {
+      console.log(event.target.value)
+      console.log(text)
+      dispatch({ type: INPUT, value: event.target.value })
+    }
   }
-  // useEffect(() => {updateText},[])
+  useEffect(() => {
+  },[])
   return (
     <div className="container">
       <input onChange={updateText}></input>

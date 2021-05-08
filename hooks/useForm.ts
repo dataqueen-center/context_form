@@ -15,20 +15,7 @@ export const useForm = (initialState: string) => {
     console.log("きてる")
     return { text: initialText }
   }
-  const [state, dispatch] = useReducer(textReducer, {text: initialState}, initTextState)
-  // const updateText = (
-  //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => {
-  //   dispatch({ type: INPUT, value: e.target.value })
-  // }
-
+  //const [state, dispatch] = useReducer(textReducer, {text: initialState}, initTextState)
+  const [state, dispatch] = useReducer(textReducer, {text: ""})
   return [state, dispatch]
-
-  // return {
-  //   state,
-  //   dispatch
-  //   // bind: {
-  //   //   onChange: updateText,
-  //   // },
-  // }
 }
