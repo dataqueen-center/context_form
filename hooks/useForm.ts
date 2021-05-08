@@ -12,9 +12,10 @@ export const useForm = (initialState: string) => {
     }
   }
   const initTextState = (initialText: string) => {
+    console.log("きてる")
     return { text: initialText }
   }
-  const [state, dispatch] = useReducer(textReducer, initialState, initTextState)
+  const [state, dispatch] = useReducer(textReducer, {text: initialState}, initTextState)
   // const updateText = (
   //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   // ) => {

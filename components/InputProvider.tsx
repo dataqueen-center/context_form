@@ -12,6 +12,7 @@ const InputDispatchContext = createContext(null)
 export const InputProvider: React.FC<InputProviderProps> = ({
   children,
 }: InputProviderProps): JSX.Element => {
+  console.log("きてる")
   const [state, dispatch] = useForm('')
   return (
     <InputDispatchContext.Provider value={dispatch}>
