@@ -11,15 +11,17 @@ type InputFieldProps = {
 export const InputField: React.FC<InputFieldProps> = ({
   initial_text,
 }: InputFieldProps): JSX.Element => {
-  const text = useText().text
+  const text = useText()
   const dispatch = useDispatchText()
 
   const updateText = (event) => {
-    if (text !== event.target.value) {
+    if (dispatch !== null) {
       console.log(event.target.value)
       console.log(text)
       dispatch({ type: INPUT, value: event.target.value })
     }
+    console.log(event.target.value)
+    console.log(text)
   }
   useEffect(() => {
   },[])
