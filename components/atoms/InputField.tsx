@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, createContext } from 'react'
+import React, { useReducer, useContext, createContext, useEffect } from 'react'
 import { useText, useDispatchText } from '../InputProvider'
 //import { theme } from '../../styles/theme'
 
@@ -13,12 +13,13 @@ export const InputField: React.FC<InputFieldProps> = ({
 }: InputFieldProps): JSX.Element => {
   const text = useText().text
   const dispatch = useDispatchText()
-  const updateText = (e) => {
-    dispatch({ type: INPUT, value: e.target.value })
+
+  const updateText = (event)=> {
+    dispatch({ type: INPUT, value: event.target.value })
   }
   return (
     <div className="container">
-      <input onClick={updateText}></input>
+      <input onChange={updateText}></input>
       {text}
       <style jsx>{``}</style>
     </div>

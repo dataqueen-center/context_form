@@ -10,7 +10,7 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-      <InputField initial_text=""/>
+      <InputField initial_text="こんにちは"/>
       <button>
         Send!!
       </button>
