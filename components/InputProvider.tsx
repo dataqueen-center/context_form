@@ -1,26 +1,36 @@
 import React, { useReducer, useContext, createContext } from 'react'
 //import { theme } from '../../styles/theme'
-
- type InputProviderProps = {
-//   element: type
-    children: any
+import { useForm } from '../hooks/useForm'
+const INPUT = 'input'
+type InputProviderProps = {
+  //   element: type
+  children: any
 }
-const InputStateContext = createContext(null);
-const InputDispatchContext = createContext(null);
-
-
-
-export const InputProvider: React.FC<InputProviderProps> = ({ children }: InputProviderProps): JSX.Element => {
-  const [state, dispatch] = useReducer(textReducer, "")
+const InputStateContext = createContext('')
+const InputDispatchContext = createContext(null)
+const textReducer = (state, action) => {
+  switch (action.type) {
+    case INPUT:
+      //return { ...state, text: action.value }
+      return action.value
+    default:
+      return state
+  }
+}
+export const InputProvider: React.FC<InputProviderProps> = ({
+  children,
+}: InputProviderProps): JSX.Element => {
+  console.log("きてる")
+  //const [state, dispatch] = useForm('')
+  const [state, dispatch] = useReducer(textReducer, '')
   return (
     <InputDispatchContext.Provider value={dispatch}>
       <InputStateContext.Provider value={state}>
         {children}
-        {console.log(typeof(children))}
       </InputStateContext.Provider>
     </InputDispatchContext.Provider>
-  );
+  )
 }
 
-export const useText = () => useContext(InputStateContext);
-export const useDispatchText = () => useContext(InputDispatchContext);
+export const useText = () => useContext(InputStateContext)
+export const useDispatchText = () => useContext(InputDispatchContext)

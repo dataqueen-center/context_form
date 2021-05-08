@@ -1,7 +1,8 @@
 import Head from 'next/head'
 //import Image from 'next/image'
-import { InputField } from '../components/atoms/InputField';
+import { InputField } from '../components/atoms/InputField'
 
+import { InputProvider } from '../components/InputProvider'
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
@@ -10,15 +11,12 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-      <InputField initial_text=""/>
-      <button>
-        Send!!
-      </button>
+      <InputField initial_text="こんにちは" />
+
+      <button>Send!!</button>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <style jsx>{`
       .container {
@@ -51,9 +49,6 @@ export const Home = (): JSX.Element => (
         justify-content: center;
         align-items: center;
       }
-
-
-
 
       @media (max-width: 600px) {
         .grid {
