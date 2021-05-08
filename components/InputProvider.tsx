@@ -6,12 +6,13 @@ type InputProviderProps = {
   //   element: type
   children: any
 }
-const InputStateContext = createContext({ text: "" })
-const InputDispatchContext = createContext()
+const InputStateContext = createContext('')
+const InputDispatchContext = createContext(null)
 const textReducer = (state, action) => {
   switch (action.type) {
     case INPUT:
-      return { ...state, text: action.value }
+      //return { ...state, text: action.value }
+      return action.value
     default:
       return state
   }
@@ -21,7 +22,7 @@ export const InputProvider: React.FC<InputProviderProps> = ({
 }: InputProviderProps): JSX.Element => {
   console.log("きてる")
   //const [state, dispatch] = useForm('')
-  const [state, dispatch] = useReducer(textReducer, {text: ''})
+  const [state, dispatch] = useReducer(textReducer, '')
   return (
     <InputDispatchContext.Provider value={dispatch}>
       <InputStateContext.Provider value={state}>
