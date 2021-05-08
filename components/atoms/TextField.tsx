@@ -1,20 +1,23 @@
 import React, { useReducer, useContext, createContext } from 'react'
-//import { theme } from '../../styles/theme'
+import { useText, useDispatchText } from '../InputProvider'
+import { useUpdateText } from '../../hooks/useUpdateText';
 
 type TextFieldProps = {
   initial_text: string
 }
 
-// const InputStateContext = createContext(null);
-// const InputDispatchContext = createContext(null);
+
 
 export const TextField: React.FC<TextFieldProps> = ({
   initial_text,
 }: TextFieldProps): JSX.Element => {
+  const text = useText()
+  const dispatch = useDispatchText()
+  const updateText = useUpdateText(dispatch)
   return (
 
     <div className="container">
-      <textarea/>
+      <textarea onChange={updateText}></textarea>
       <style jsx>{``}</style>
     </div>
   )
