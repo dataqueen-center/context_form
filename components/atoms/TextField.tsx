@@ -1,4 +1,4 @@
-import React, { useReducer, useContext, createContext } from 'react'
+import React from 'react'
 import { useText, useDispatchText } from '../InputProvider'
 import { useUpdateText } from '../../hooks/useUpdateText';
 
@@ -17,7 +17,8 @@ export const TextField: React.FC<TextFieldProps> = ({
   return (
 
     <div className="container">
-      <textarea onChange={updateText}></textarea>
+      <textarea onChange={updateText}/>
+      {text}
       <style jsx>{``}</style>
     </div>
   )

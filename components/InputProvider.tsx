@@ -1,5 +1,4 @@
-import React, { useReducer, useContext, createContext } from 'react'
-//import { theme } from '../../styles/theme'
+import React, { useContext, createContext } from 'react'
 import { useForm } from '../hooks/useForm'
 const INPUT = 'input'
 type InputProviderProps = {
