@@ -1,8 +1,7 @@
 import Head from 'next/head'
 //import Image from 'next/image'
 import { InputField } from '../components/atoms/InputField'
-
-import { InputProvider } from '../components/InputProvider'
+import { TextField } from '../components/atoms/TextField';
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
@@ -12,7 +11,7 @@ export const Home = (): JSX.Element => (
 
     <main>
       <InputField initial_text="こんにちは" />
-
+      <TextField initial_text="こんんだ"/>
       <button>Send!!</button>
     </main>
 
