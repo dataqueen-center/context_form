@@ -1,19 +1,20 @@
 import React, { useReducer, useContext, createContext } from 'react'
 //import { theme } from '../../styles/theme'
 
-type InputFieldProps = {
+type TextFieldProps = {
   initial_text: string
 }
 
-const InputStateContext = createContext(null);
-const InputDispatchContext = createContext(null);
+// const InputStateContext = createContext(null);
+// const InputDispatchContext = createContext(null);
 
-export const InputField: React.FC<InputFieldProps> = ({
+export const TextField: React.FC<TextFieldProps> = ({
   initial_text,
-}: InputFieldProps): JSX.Element => {
+}: TextFieldProps): JSX.Element => {
   return (
+
     <div className="container">
-      <input></input>
+      <textarea/>
       <style jsx>{``}</style>
     </div>
   )

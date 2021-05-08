@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
+//import Image from 'next/image'
+import { InputField } from '../components/atoms/InputField';
 
 export const Home = (): JSX.Element => (
   <div className="container">
@@ -9,7 +10,10 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-
+      <InputField initial_text=""/>
+      <button>
+        Send!!
+      </button>
     </main>
 
     <footer>
@@ -24,6 +28,10 @@ export const Home = (): JSX.Element => (
         flex-direction: column;
         justify-content: center;
         align-items: center;
+      }
+
+      button {
+        margin: 2rem;
       }
 
       main {
