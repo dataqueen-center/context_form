@@ -9,23 +9,24 @@ export const useForm = (initialState: string) => {
         return { text: action.value }
 
       default:
-        break
+        return state
     }
   }
   const initTextState = (initialText: string) => {
     return { text: initialText }
   }
   const [state, dispatch] = useReducer(textReducer, initialState, initTextState)
-  const updateText = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    dispatch({ type: INPUT, value: e.target.value })
-  }
+  // const updateText = (
+  //   e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   dispatch({ type: INPUT, value: e.target.value })
+  // }
 
   return {
     state,
-    bind: {
-      onChange: updateText,
-    },
+    dispatch
+    // bind: {
+    //   onChange: updateText,
+    // },
   }
 }
