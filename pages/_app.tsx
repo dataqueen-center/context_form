@@ -1,9 +1,8 @@
-import App from 'next/app'
 import { InputProvider } from '../components/InputProvider'
+// import App from "next/app";
+import type { AppProps /*, AppContext */ } from 'next/app'
 
-// import App from 'next/app'
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <InputProvider>
       <Component {...pageProps} />
@@ -16,10 +15,10 @@ function MyApp({ Component, pageProps }) {
 // perform automatic static optimization, causing every page in your app to
 // be server-side rendered.
 //
-// MyApp.getInitialProps = async (appContext) => {
+// MyApp.getInitialProps = async (appContext: AppContext) => {
 //   // calls page's `getInitialProps` and fills `appProps.pageProps`
 //   const appProps = await App.getInitialProps(appContext);
-//
+
 //   return { ...appProps }
 // }
 

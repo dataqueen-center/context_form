@@ -7,7 +7,7 @@ type InputProviderProps = {
   children: any
 }
 const InputStateContext = createContext('')
-const InputDispatchContext = createContext(null)
+const InputDispatchContext = createContext()
 const textReducer = (state, action) => {
   switch (action.type) {
     case INPUT:

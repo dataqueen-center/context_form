@@ -15,7 +15,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   const dispatch = useDispatchText()
 
   const updateText = (event) => {
-    if (dispatch !== null) {
+    if (dispatch) {
       console.log(event.target.value)
       console.log(text)
       dispatch({ type: INPUT, value: event.target.value })
