@@ -11,11 +11,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({  }: ContactFormProps):
   const textState = useText()
   return (
     <div className="container">
-      <InputField initial_text="山田太郎" key="name_holder"/>
+      <InputField initial_text="山田太郎" name="name_holder"/>
       {textState.name}
-      <InputField initial_text="山田太郎" key="email_holder"/>
+      <InputField initial_text="山田太郎" name="email_holder"/>
       {textState.email}
-      <TextField initial_text="この前購入した製品が動かない" key="content_holder"/>
+      <TextField initial_text="この前購入した製品が動かない" name="content_holder"/>
       {textState.content}
       <button>send!!</button>
       <style jsx>{`

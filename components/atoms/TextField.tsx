@@ -4,12 +4,13 @@ import { useUpdateText } from '../../hooks/useUpdateText';
 
 type TextFieldProps = {
   initial_text: string
+  name: string
 }
 
 
 
 export const TextField: React.FC<TextFieldProps> = ({
-  initial_text,
+  initial_text, name
 }: TextFieldProps): JSX.Element => {
   const text = useText()
   const dispatch = useDispatchText()
@@ -17,7 +18,7 @@ export const TextField: React.FC<TextFieldProps> = ({
   return (
 
     <div className="container">
-      <textarea onChange={updateText} placeholder={initial_text}/>
+      <textarea onChange={updateText} placeholder={initial_text} name={name}/>
       {text}
       <style jsx>{``}</style>
     </div>
