@@ -17,7 +17,7 @@ export const TextField: React.FC<TextFieldProps> = ({
   return (
 
     <div className="container">
-      <textarea onChange={updateText}/>
+      <textarea onChange={updateText} placeholder={initial_text}/>
       {text}
       <style jsx>{``}</style>
     </div>
