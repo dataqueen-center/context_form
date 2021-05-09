@@ -13,13 +13,17 @@ export const InputProvider: React.FC<InputProviderProps> = ({
 }: InputProviderProps): JSX.Element => {
   const [state, dispatch] = useForm('')
   return (
-    <div>
-    <InputDispatchContext.Provider value={dispatch}>
-      <InputStateContext.Provider value={state}>
+
+    <InputDispatchContext.Provider value={{dispatch}}>
+    <InputStateContext.Provider value={state}>
         {children}
       </InputStateContext.Provider>
     </InputDispatchContext.Provider>
-    </div>
+    // <InputStateContext.Provider value={{state, dispatch}}>
+    //   {children}
+    // </InputStateContext.Provider>
+
+
   )
 }
 

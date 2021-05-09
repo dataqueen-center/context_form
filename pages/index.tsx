@@ -12,9 +12,7 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-      <InputProvider>
         <ContactForm/>
-      </InputProvider>
     </main>
 
     <footer></footer>

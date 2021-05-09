@@ -10,7 +10,8 @@ type InputFieldProps = {
 export const InputField: React.FC<InputFieldProps> = ({
   initial_text, name
 }: InputFieldProps): JSX.Element => {
-  // const text = useText()
+  //const [name_state, email_state, content_state] = useText()
+  //const {state, dispatch} = useText()
   const dispatch = useDispatchText()
   const updateText = useUpdateText(dispatch)
   return (
