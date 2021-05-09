@@ -4,19 +4,17 @@ import { useUpdateText } from '../../hooks/useUpdateText';
 
 type InputFieldProps = {
   initial_text: string
+  name: string
 }
 
 export const InputField: React.FC<InputFieldProps> = ({
-  initial_text,
+  initial_text, name
 }: InputFieldProps): JSX.Element => {
-  const text = useText()
   const dispatch = useDispatchText()
   const updateText = useUpdateText(dispatch)
   return (
     <div className="container">
-      <input onChange={updateText} placeholder={initial_text}></input>
-      {text}
-
+      <input onChange={updateText} placeholder={initial_text} name={name}></input>
       <style jsx>{``}</style>
     </div>
   )
