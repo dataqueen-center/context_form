@@ -15,8 +15,8 @@ export const InputProvider: React.FC<InputProviderProps> = ({
   return (
     <div>
     <InputDispatchContext.Provider value={dispatch}>
-      <InputStateContext.Provider value={[state]}>
-        {[children]}
+      <InputStateContext.Provider value={state}>
+        {children}
       </InputStateContext.Provider>
     </InputDispatchContext.Provider>
     </div>
