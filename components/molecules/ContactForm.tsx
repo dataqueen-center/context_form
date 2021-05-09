@@ -9,7 +9,6 @@ type ContactFormProps = {
 
 export const ContactForm: React.FC<ContactFormProps> = ({  }: ContactFormProps): JSX.Element => {
   const textState = useText()
-  //const [name, email, content] = useText()
   return (
     <div className="container">
       <InputField initial_text="山田太郎" name="name_holder"/>

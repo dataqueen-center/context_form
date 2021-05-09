@@ -7,19 +7,15 @@ type TextFieldProps = {
   name: string
 }
 
-
-
 export const TextField: React.FC<TextFieldProps> = ({
   initial_text, name
 }: TextFieldProps): JSX.Element => {
-  //const text = useText()
   const dispatch = useDispatchText()
   const updateText = useUpdateText(dispatch)
   return (
 
     <div className="container">
       <textarea onChange={updateText} placeholder={initial_text} name={name}/>
-      {/* {text} */}
       <style jsx>{``}</style>
     </div>
   )
