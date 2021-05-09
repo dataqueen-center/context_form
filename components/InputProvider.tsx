@@ -14,16 +14,11 @@ export const InputProvider: React.FC<InputProviderProps> = ({
   const [state, dispatch] = useForm('')
   return (
 
-    <InputDispatchContext.Provider value={{dispatch}}>
+    <InputDispatchContext.Provider value={dispatch}>
     <InputStateContext.Provider value={state}>
         {children}
       </InputStateContext.Provider>
     </InputDispatchContext.Provider>
-    // <InputStateContext.Provider value={{state, dispatch}}>
-    //   {children}
-    // </InputStateContext.Provider>
-
-
   )
 }
 
