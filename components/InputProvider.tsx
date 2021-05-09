@@ -2,7 +2,7 @@ import React, { useContext, createContext } from 'react'
 import { useForm } from '../hooks/useForm'
 const INPUT = 'input'
 type InputProviderProps = {
-  children: any
+  children: React.ReactNode
 }
 //const InputStateContext = createContext({name: '', email: '', content: ''})
 const InputStateContext = createContext()
@@ -13,11 +13,13 @@ export const InputProvider: React.FC<InputProviderProps> = ({
 }: InputProviderProps): JSX.Element => {
   const [state, dispatch] = useForm('')
   return (
+    <div>
     <InputDispatchContext.Provider value={dispatch}>
-      <InputStateContext.Provider value={state}>
-        {children}
+      <InputStateContext.Provider value={[state]}>
+        {[children]}
       </InputStateContext.Provider>
     </InputDispatchContext.Provider>
+    </div>
   )
 }
 
