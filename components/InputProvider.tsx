@@ -4,7 +4,7 @@ const INPUT = 'input'
 type InputProviderProps = {
   children: any
 }
-const InputStateContext = createContext('')
+const InputStateContext = createContext({name: '', email: '', content: ''})
 const InputDispatchContext = createContext()
 
 export const InputProvider: React.FC<InputProviderProps> = ({

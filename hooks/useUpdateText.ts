@@ -7,6 +7,7 @@ export const useUpdateText = (dispatch) => {
       dispatch({ type: INPUT, value: event.target.value })
     }
     console.log(event.target.value)
+    console.log(event.target.key)
   }
 
   return updateText

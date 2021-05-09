@@ -2,6 +2,7 @@ import Head from 'next/head'
 //import Image from 'next/image'
 import { InputField } from '../components/atoms/InputField'
 import { TextField } from '../components/atoms/TextField';
+import { ContactForm } from '../components/molecules/ContactForm';
 export const Home = (): JSX.Element => (
   <div className="container">
     <Head>
@@ -10,9 +11,7 @@ export const Home = (): JSX.Element => (
     </Head>
 
     <main>
-      <InputField initial_text="こんにちは" />
-      <TextField initial_text="こんんだ"/>
-      <button>Send!!</button>
+      <ContactForm/>
     </main>
 
     <footer></footer>
