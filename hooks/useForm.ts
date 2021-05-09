@@ -21,7 +21,7 @@ export const useForm = (initialState: string) => {
     //return initialText
     return {name: initialText, email: initialText, content: initialState}
   }
-  //const [state, dispatch] = useReducer(textReducer, initialState, initTextState)
-  const [state, dispatch] = useReducer(textReducer,{name: '',email: '',content: ''})
+  const [state, dispatch] = useReducer(textReducer, initialState, initTextState)
+  //const [state, dispatch] = useReducer(textReducer,{name: '',email: '',content: ''})
   return [state, dispatch]
 }
