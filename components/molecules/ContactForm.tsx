@@ -14,7 +14,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({  }: ContactFormProps):
     <div className="container">
       <InputField initial_text="山田太郎" name="name_holder"/>
       {textState.name}
-      <InputField initial_text="山田太郎" name="email_holder"/>
+      <InputField initial_text="xxx@gmail.com" name="email_holder"/>
       {textState.email}
       <TextField initial_text="この前購入した製品が動かない" name="content_holder"/>
       {textState.content}
