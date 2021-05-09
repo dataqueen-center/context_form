@@ -14,7 +14,7 @@ export const InputField: React.FC<InputFieldProps> = ({
   const updateText = useUpdateText(dispatch)
   return (
     <div className="container">
-      <input onChange={updateText}></input>
+      <input onChange={updateText} placeholder={initial_text}></input>
       {text}
 
       <style jsx>{``}</style>
