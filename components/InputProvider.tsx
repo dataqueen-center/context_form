@@ -3,7 +3,7 @@ import { useForm } from '../hooks/useForm'
 type InputProviderProps = {
   children: React.ReactNode
 }
-const InputStateContext = createContext({})
+const InputStateContext = createContext({name: '',email: '',content: ''})
 const InputDispatchContext = createContext(null)
 
 export const InputProvider: React.FC<InputProviderProps> = ({
