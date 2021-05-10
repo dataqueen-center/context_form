@@ -9,7 +9,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 
 ## demo
-context-form.vercel.app
+https://context-form.vercel.app
 
 ## How to use
 
